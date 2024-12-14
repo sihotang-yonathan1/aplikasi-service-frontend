@@ -104,7 +104,7 @@ function addTodoToList(todo) {
   todoItem
     .querySelector('input[type="checkbox"]')
     .addEventListener("change", async (e) => {
-      await updateTodo(todo.id, { is_done: e.target.checked });
+      await patchTodo(todo.id, { is_done: e.target.checked });
     });
 
   todoList.appendChild(todoItem);
